@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Road
 {
     constructor(x,width,laneCount=3)
@@ -53,7 +52,6 @@ class Road
             ctx.moveTo(x,this.top);
             ctx.lineTo(x,this.bottom);
             ctx.stroke();
-            nice;
         }
 
         ctx.setLineDash([]);
@@ -66,5 +64,3 @@ class Road
             });
     }
 }
-=======
->>>>>>> parent of 5c0d280 (roads)
