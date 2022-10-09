@@ -14,13 +14,16 @@ class Car
         this.friction=0.05;
         this.angle=0;
 
+        // Sensors for the car
+        this.sensor=new Sensor(this);
         // Implementing the controls
         this.controls=new Controls();
     }
 
-    update()
+    update(roadBorders)
     {
         this.#move();
+        this.sensor.update(roadBorders);
     }
 
     #move()
@@ -98,5 +101,8 @@ class Car
         
         // To avoid infinite translate()
         ctx.restore();
+
+        // The car will draw its own sensor.
+        this.sensor.draw(ctx);
     }
 }
